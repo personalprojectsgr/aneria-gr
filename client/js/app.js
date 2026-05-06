@@ -113,12 +113,37 @@
     });
   };
 
+  const initFontSize = () => {
+    const STORAGE_KEY = 'aneria-font-size';
+    const buttons = document.querySelectorAll('.font-size-btn');
+    if (!buttons.length) return;
+
+    const apply = (size) => {
+      document.documentElement.classList.remove('fs-sm', 'fs-md', 'fs-lg');
+      document.documentElement.classList.add('fs-' + size);
+      buttons.forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.fontSize === size);
+      });
+      try { localStorage.setItem(STORAGE_KEY, size); } catch (_) {}
+    };
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => apply(btn.dataset.fontSize));
+    });
+
+    const saved = (() => {
+      try { return localStorage.getItem(STORAGE_KEY); } catch (_) { return null; }
+    })();
+    apply(saved && ['sm', 'md', 'lg'].includes(saved) ? saved : 'md');
+  };
+
   onReady(() => {
     try {
       initStickyHeader();
       initMobileNav();
       initRevealOnScroll();
       initSmoothAnchors();
+      initFontSize();
       initYear();
       log('info', 'aneria.gr client ready', { url: window.location.href });
     } catch (err) {

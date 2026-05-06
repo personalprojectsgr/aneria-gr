@@ -448,6 +448,72 @@ a.contact__card:focus-visible .eyebrow {
   transform: scaleX(1);
 }
 
+.font-size-controls {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  margin-left: auto;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.font-size-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-family: var(--f-sans);
+  font-weight: 500;
+  color: var(--c-muted);
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--c-line);
+  cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast);
+  padding: 0;
+  line-height: 1;
+}
+
+.font-size-btn:last-child {
+  border-right: 0;
+}
+
+.font-size-btn:hover {
+  background: var(--c-paper);
+  color: var(--c-ink);
+}
+
+.font-size-btn.is-active {
+  background: var(--c-ink);
+  color: var(--c-paper);
+}
+
+.font-size-btn--sm {
+  font-size: 0.75rem;
+}
+
+.font-size-btn--md {
+  font-size: 1rem;
+}
+
+.font-size-btn--lg {
+  font-size: 1.3rem;
+}
+
+html.fs-sm {
+  font-size: 14px;
+}
+
+html.fs-md {
+  font-size: 17px;
+}
+
+html.fs-lg {
+  font-size: 20px;
+}
+
 body.menu-open .nav-toggle span:nth-child(1) {
   transform: translateY(6.5px) rotate(45deg);
 }
