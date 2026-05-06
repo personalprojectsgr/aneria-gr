@@ -137,27 +137,6 @@
   transform: scaleX(1);
 }
 
-.nav__list .nav__eshop {
-  color: var(--c-accent);
-  padding: 0.45rem 0.85rem;
-  border: 1px solid var(--c-accent);
-  border-radius: 999px;
-  letter-spacing: 0.06em;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  transition: background var(--t-fast), color var(--t-fast);
-}
-
-.nav__list .nav__eshop::after {
-  display: none;
-}
-
-.nav__list .nav__eshop:hover,
-.nav__list .nav__eshop:focus-visible {
-  background: var(--c-accent);
-  color: var(--c-paper);
-}
-
 .nav-toggle {
   display: none;
   flex-direction: column;

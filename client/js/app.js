@@ -34,6 +34,7 @@
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Open menu');
       menu.hidden = true;
+      menu.style.display = '';
       document.body.classList.remove('menu-open');
     };
 
