@@ -38,24 +38,28 @@
 
     <header class="site-header" id="site-header">
       <div class="site-header__inner">
-        <a class="brand" href="#top" aria-label="Aneria — home">
+        <a class="brand" href="/" aria-label="Aneria — home">
           <span class="brand__mark">a</span>
           <span class="brand__name">aneria</span>
           <span class="brand__tld">.gr</span>
         </a>
         <nav class="nav" aria-label="Primary">
           <ul class="nav__list">
-            <li><a href="#work">Work</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="/eshop.html">E-shop</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#work" data-i18n="nav.work">Work</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="/eshop.html" data-i18n="nav.eshop">E-shop</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </nav>
-        <div class="font-size-controls" role="group" aria-label="Text size">
-          <button type="button" class="font-size-btn font-size-btn--sm" data-font-size="sm" aria-label="Small text">A</button>
-          <button type="button" class="font-size-btn font-size-btn--md is-active" data-font-size="md" aria-label="Medium text">A</button>
-          <button type="button" class="font-size-btn font-size-btn--lg" data-font-size="lg" aria-label="Large text">A</button>
+        <div class="font-size-ctrl" role="group" aria-label="Text size">
+          <button type="button" data-size="small" aria-label="Small text">A</button>
+          <button type="button" data-size="medium" class="is-active" aria-label="Medium text">A</button>
+          <button type="button" data-size="large" aria-label="Large text">A</button>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="el" class="is-active">EL</button>
         </div>
         <button
           class="nav-toggle"
@@ -69,11 +73,11 @@
       </div>
       <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile" hidden>
         <ul>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="/eshop.html">E-shop</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#work" data-i18n="nav.work">Work</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="/eshop.html" data-i18n="nav.eshop">E-shop</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -89,28 +93,29 @@
           />
         </div>
         <div class="hero__text">
-          <p class="eyebrow">Athens · Photography · Est. 2014</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Athens · Photography · Est. 2014</p>
           <h1 class="display">
-            Quiet light,<br />
-            <em>loud feeling.</em>
+            <span data-i18n="hero.title.1">Quiet light,</span><br />
+            <em data-i18n="hero.title.2">loud feeling.</em>
           </h1>
-          <p class="lede">
+          <p class="lede" data-i18n="hero.desc">
             I&rsquo;m Aneria — an Athens-based photographer documenting weddings,
             portraits and editorial stories across Greece and the wider
             Mediterranean.
           </p>
           <div class="hero__cta">
-            <a class="btn" href="#work">View the work</a>
-            <a class="btn btn--ghost" href="#contact">Begin a conversation →</a>
+            <a class="btn" href="#work" data-i18n="hero.cta.work">View the work</a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.contact">Begin a conversation →</a>
           </div>
         </div>
         <div class="hero__scroll" aria-hidden="true">
-          <span>scroll</span>
+          <span data-i18n="hero.scroll">scroll</span>
           <span class="hero__scroll-line"></span>
         </div>
       </section>
 
       <section class="section section--meta" aria-label="Marquee">
+        <button class="marquee-pause" type="button" aria-label="Pause scrolling text" data-playing="true">❚❚</button>
         <div class="marquee" aria-hidden="true">
           <div class="marquee__track">
             <span>Athens</span><span>·</span><span>Hydra</span><span>·</span>
@@ -126,11 +131,11 @@
 
       <section class="section" id="work">
         <header class="section__head">
-          <p class="eyebrow">Selected work · 2018 — 2026</p>
+          <p class="eyebrow" data-i18n="work.eyebrow">Selected work · 2018 — 2026</p>
           <h2 class="display display--md">
-            Stories told in <em>natural light.</em>
+            <span data-i18n="work.title.1">Stories told in </span><em data-i18n="work.title.2">natural light.</em>
           </h2>
-          <p class="section__lede">
+          <p class="section__lede" data-i18n="work.desc">
             A small, slow archive — chosen for feeling rather than volume.
             Click any frame to open the story.
           </p>
@@ -212,7 +217,7 @@
         </div>
 
         <div class="section__foot">
-          <a class="btn btn--ghost" href="#contact">Request the full portfolio →</a>
+          <a class="btn btn--ghost" href="#contact" data-i18n="work.cta">Request the full portfolio →</a>
         </div>
       </section>
 
@@ -223,102 +228,115 @@
             src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=1200&q=80&auto=format&fit=crop"
             alt="Aneria, photographer, holding a film camera"
           />
-          <p class="caption">Self-portrait, Exarcheia studio · 2024</p>
+          <p class="caption" data-i18n="about.caption">Self-portrait, Exarcheia studio · 2024</p>
         </div>
         <div class="split__text">
-          <p class="eyebrow">About — Λίγα λόγια</p>
+          <p class="eyebrow" data-i18n="about.eyebrow">About — Λίγα λόγια</p>
           <h2 class="display display--md">
-            I photograph the way memory <em>actually feels.</em>
+            <span data-i18n="about.title.1">I photograph the way memory </span><em data-i18n="about.title.2">actually feels.</em>
           </h2>
-          <p>
+          <p data-i18n="about.p1">
             I grew up between Athens and a small village on the slopes of
             Pelion, which is probably why I keep coming back to slow afternoons,
             warm stone, and the people who sit inside them.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             For the last decade I&rsquo;ve worked with couples, families and
             magazines who want photographs that breathe — unhurried,
             unposed, and made on real film whenever the day allows it.
           </p>
           <ul class="meta-list">
-            <li><span>Based</span><strong>Athens, GR</strong></li>
-            <li><span>Travels</span><strong>Worldwide</strong></li>
-            <li><span>Speaks</span><strong>Ελληνικά · English · Italiano</strong></li>
-            <li><span>Featured</span><strong>Vogue Greece · Kinfolk · Cereal</strong></li>
+            <li><span data-i18n="about.based">Based</span><strong data-i18n="about.based.val">Athens, GR</strong></li>
+            <li><span data-i18n="about.travels">Travels</span><strong data-i18n="about.travels.val">Worldwide</strong></li>
+            <li><span data-i18n="about.speaks">Speaks</span><strong data-i18n="about.speaks.val">Ελληνικά · English · Italiano</strong></li>
+            <li><span data-i18n="about.featured">Featured</span><strong data-i18n="about.featured.val">Vogue Greece · Kinfolk · Cereal</strong></li>
           </ul>
         </div>
       </section>
 
       <section class="section section--dark" id="services">
         <header class="section__head section__head--center">
-          <p class="eyebrow eyebrow--light">Services</p>
+          <p class="eyebrow eyebrow--light" data-i18n="services.eyebrow">Services</p>
           <h2 class="display display--md">
-            Three ways to <em>work together.</em>
+            <span data-i18n="services.title.1">Three ways to </span><em data-i18n="services.title.2">work together.</em>
           </h2>
         </header>
         <div class="services">
           <article class="service">
-            <p class="service__num">01</p>
-            <h3>Weddings</h3>
-            <p>
+            <span class="service__num" aria-hidden="true">01</span>
+            <h3 data-i18n="services.wed.title">Weddings</h3>
+            <p data-i18n="services.wed.desc">
               Documentary coverage of the full day — from the morning&rsquo;s
               first coffee in Greek to the last dance under the lights.
               Available across Greece &amp; Europe.
             </p>
-            <p class="service__from">From <strong>€2,800</strong></p>
+            <p class="service__from" data-i18n-html="services.wed.price">From <strong>€2,800</strong></p>
           </article>
           <article class="service">
-            <p class="service__num">02</p>
-            <h3>Portraits</h3>
-            <p>
+            <span class="service__num" aria-hidden="true">02</span>
+            <h3 data-i18n="services.port.title">Portraits</h3>
+            <p data-i18n="services.port.desc">
               Personal sessions, family portraits, and authors&rsquo; headshots
               made on location in Athens or in studio. Two-hour minimum,
               hand-edited gallery.
             </p>
-            <p class="service__from">From <strong>€450</strong></p>
+            <p class="service__from" data-i18n-html="services.port.price">From <strong>€450</strong></p>
           </article>
           <article class="service">
-            <p class="service__num">03</p>
-            <h3>Editorial &amp; Brand</h3>
-            <p>
+            <span class="service__num" aria-hidden="true">03</span>
+            <h3 data-i18n="services.edit.title">Editorial &amp; Brand</h3>
+            <p data-i18n="services.edit.desc">
               Commissions for magazines, hospitality and slow-living brands.
               Concept, location scout, and small-team production handled
               end to end.
             </p>
-            <p class="service__from">By quotation</p>
+            <p class="service__from" data-i18n="services.edit.price">By quotation</p>
           </article>
         </div>
       </section>
 
       <section class="section section--contact" id="contact">
         <div class="contact__inner">
-          <p class="eyebrow">Begin · Ξεκινήστε</p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Begin · Ξεκινήστε</p>
           <h2 class="display">
-            Let&rsquo;s make<br /><em>something quiet</em><br />and lasting.
+            <span data-i18n="contact.title.1">Let&rsquo;s make</span><br />
+            <em data-i18n="contact.title.2">something quiet</em><br />
+            <span data-i18n="contact.title.3">and lasting.</span>
           </h2>
-          <p class="contact__lede">
+          <p class="contact__lede" data-i18n="contact.desc">
             Tell me about the day, the place, or the idea you&rsquo;re carrying.
             I read every email and reply within two working days.
           </p>
           <div class="contact__grid">
             <a class="contact__card" href="mailto:hello@aneria.gr">
-              <span class="eyebrow">Email</span>
+              <span class="eyebrow" data-i18n="contact.email">Email</span>
               <strong>hello@aneria.gr</strong>
             </a>
             <a class="contact__card" href="tel:+302100000000">
-              <span class="eyebrow">Studio</span>
+              <span class="eyebrow" data-i18n="contact.studio">Studio</span>
               <strong>+30 210 000 0000</strong>
             </a>
             <div class="contact__card">
-              <span class="eyebrow">Visit</span>
+              <span class="eyebrow" data-i18n="contact.visit">Visit</span>
               <strong>Exarcheia, Athens 10683</strong>
             </div>
             <a class="contact__card" href="https://instagram.com" target="_blank" rel="noopener">
-              <span class="eyebrow">Follow</span>
+              <span class="eyebrow" data-i18n="contact.follow">Follow</span>
               <strong>@aneria.gr</strong>
             </a>
           </div>
         </div>
+      </section>
+
+      <section class="section section--banner">
+        <a href="/Content/%CE%91%CE%A6%CE%99%CE%A3%CE%91.pdf" target="_blank" rel="noopener" class="banner-link" aria-label="Aneria photography products and services — download poster (opens PDF in new tab)">
+          <img
+            src="/Content/Banner2_GR_BLUE.png"
+            alt="Aneria photography products and services — click to download poster (PDF, opens in new tab)"
+            loading="lazy"
+            class="banner-img"
+          />
+        </a>
       </section>
     </main>
 
@@ -328,14 +346,18 @@
           <span class="brand__mark">a</span>
           <span>aneria<em>.gr</em></span>
         </p>
-        <p class="site-footer__line">Athens, Greece · Available worldwide</p>
+        <p class="site-footer__line" data-i18n="footer.line">Athens, Greece · Available worldwide</p>
         <p class="site-footer__copy">
-          © <span id="year">2026</span> Aneria. All photographs &amp; words —
-          made by hand.
+          <span data-i18n="footer.copy.pre">© </span><span id="year">2026</span><span data-i18n="footer.copy.post"> Aneria. All photographs &amp; words — made by hand.</span>
         </p>
       </div>
     </footer>
 
+    <noscript>
+      <p style="text-align:center;padding:1rem;background:#1a1817;color:#f5f1ea;">
+        This site is also available in Greek. Enable JavaScript to switch languages and access all interactive features.
+      </p>
+    </noscript>
     <script src="/js/app.js" defer></script>
   </body>
 </html>

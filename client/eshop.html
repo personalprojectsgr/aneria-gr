@@ -34,17 +34,21 @@
         </a>
         <nav class="nav" aria-label="Primary">
           <ul class="nav__list">
-            <li><a href="/#work">Work</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#services">Services</a></li>
-            <li><a href="/eshop.html" class="is-active">E-shop</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/#work" data-i18n="nav.work">Work</a></li>
+            <li><a href="/#about" data-i18n="nav.about">About</a></li>
+            <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="/eshop.html" class="is-active" data-i18n="nav.eshop">E-shop</a></li>
+            <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </nav>
-        <div class="font-size-controls" role="group" aria-label="Text size">
-          <button type="button" class="font-size-btn font-size-btn--sm" data-font-size="sm" aria-label="Small text">A</button>
-          <button type="button" class="font-size-btn font-size-btn--md is-active" data-font-size="md" aria-label="Medium text">A</button>
-          <button type="button" class="font-size-btn font-size-btn--lg" data-font-size="lg" aria-label="Large text">A</button>
+        <div class="font-size-ctrl" role="group" aria-label="Text size">
+          <button type="button" data-size="small" aria-label="Small text">A</button>
+          <button type="button" data-size="medium" class="is-active" aria-label="Medium text">A</button>
+          <button type="button" data-size="large" aria-label="Large text">A</button>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="el" class="is-active">EL</button>
         </div>
         <button
           class="nav-toggle"
@@ -58,19 +62,19 @@
       </div>
       <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile" hidden>
         <ul>
-          <li><a href="/#work">Work</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/eshop.html" class="is-active">E-shop</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/#work" data-i18n="nav.work">Work</a></li>
+          <li><a href="/#about" data-i18n="nav.about">About</a></li>
+          <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="/eshop.html" class="is-active" data-i18n="nav.eshop">E-shop</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="eshop-page">
       <div class="eshop-page__intro">
-        <h1 class="display display--md">E-shop</h1>
-        <p class="eshop-page__desc">
+        <h1 class="display display--md" data-i18n="eshop.title">E-shop</h1>
+        <p class="eshop-page__desc" data-i18n="eshop.desc">
           Order all your photography products in one place. Transform your
           favourite photos and have them printed on mugs, t-shirts, mouse pads
           and many other items. Prints, albums, enlargements — everything
@@ -86,6 +90,11 @@
       </div>
     </main>
 
+    <noscript>
+      <p style="text-align:center;padding:1rem;background:#1a1817;color:#f5f1ea;">
+        This site is also available in Greek. Enable JavaScript to switch languages and access all interactive features.
+      </p>
+    </noscript>
     <script src="/js/app.js" defer></script>
   </body>
 </html>
