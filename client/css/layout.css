@@ -73,6 +73,25 @@
   gap: 2rem;
 }
 
+.header-banner {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: calc(var(--header-h) - 16px);
+  margin-right: 0.5rem;
+  transition: opacity var(--t-fast);
+}
+
+.header-banner:hover {
+  opacity: 0.85;
+}
+
+.header-banner img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
 .brand {
   display: inline-flex;
   align-items: baseline;
@@ -103,7 +122,7 @@
 }
 
 .brand__tld {
-  color: var(--c-accent);
+  color: var(--c-ink);
   font-style: italic;
   font-size: 0.9em;
 }

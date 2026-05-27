@@ -404,7 +404,7 @@ a.contact__card:focus-visible .eyebrow {
 }
 
 .site-footer__brand em {
-  color: var(--c-accent);
+  color: var(--c-ink);
 }
 
 @media (max-width: 920px) {
